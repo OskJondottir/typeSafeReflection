@@ -1,4 +1,4 @@
-package osk.jondottir.reflection;
+package osk.jonsdottir.reflection;
 
 import static org.mockito.Mockito.mock;
 

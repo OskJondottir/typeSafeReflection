@@ -1,7 +1,7 @@
-package osk.jondottir.reflection.example;
+package osk.jonsdottir.reflection.example;
 
-import static osk.jondottir.reflection.Inspector.inspect;
-import static osk.jondottir.reflection.Inspector.method;
+import static osk.jonsdottir.reflection.Inspector.inspect;
+import static osk.jonsdottir.reflection.Inspector.method;
 
 import java.lang.reflect.Method;
 
@@ -33,6 +33,14 @@ public class Foo {
         System.out.println(methodGetB.getName()); //displays "getB"
         
         //Method methodGetBar = method(inspect(foo).getBar());  //This gives a compile time error: the method name must exist!
+        
+        try {
+            Method methodGetBar = Foo.class.getMethod("getBar"); //This compiles, but then gives a runtime error
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        }
     }
     
 }
