@@ -1,6 +1,6 @@
 # typeSafeReflection
 
-A tiny library to provide method reflection with compiler checks for Java.
+A tiny library to provide method reflection with compile time type checks for Java.
 
 ## Usage
 
